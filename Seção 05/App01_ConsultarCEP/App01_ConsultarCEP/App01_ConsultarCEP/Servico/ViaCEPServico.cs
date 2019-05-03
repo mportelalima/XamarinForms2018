@@ -5,6 +5,7 @@ using System.Net;
 using App01_ConsultarCEP.Servico.Modelo;
 using Newtonsoft.Json;
 
+
 namespace App01_ConsultarCEP.Servico
 {
     public class ViaCEPServico
@@ -16,17 +17,17 @@ namespace App01_ConsultarCEP.Servico
             string NovoEnderecoURL = string.Format(EnderecoURL, cep);
 
             WebClient wc = new WebClient();
-            string conteudo = wc.DownloadString(NovoEnderecoURL);
+            string Conteudo = wc.DownloadString(NovoEnderecoURL);
 
-            Endereco end = JsonConvert.DeserializeObject<Endereco>(conteudo);
+            Endereco end = JsonConvert.DeserializeObject<Endereco>(Conteudo);
 
-            if (end.cep == null)
+            if(end.cep == null)
             {
                 return null;
             }
 
             return end;
-            
         }
     }
 }
+

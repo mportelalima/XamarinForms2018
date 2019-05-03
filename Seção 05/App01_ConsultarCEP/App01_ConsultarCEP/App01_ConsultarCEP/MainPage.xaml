@@ -4,26 +4,16 @@
              xmlns:local="clr-namespace:App01_ConsultarCEP"
              x:Class="App01_ConsultarCEP.MainPage">
 
-    <StackLayout BackgroundColor="#FFBF00" 
-                 Padding="30" 
-                 Spacing="30">
-        <!-- Place new controls here -->
+    <StackLayout BackgroundColor="#FFBF00" Padding="30" Spacing="30">
 
-        <Image x:Name="LOGO"
-            Source="logo.png" />
+        <Image Source="logo.png" x:Name="Logo"/>
 
-        <Entry x:Name="CEP"
-            Placeholder="Digite o cep" PlaceholderColor="#FFBF00" BackgroundColor="#FFFFFF"
-               />
+        <Entry Placeholder="Digite o CEP" PlaceholderColor="#FFBF00" BackgroundColor="#FFFFFF" x:Name="cep"/>
 
-        <Button x:Name="BOTAO"
-            Text="BUSCAR CEP" TextColor="#FFFFFF" BackgroundColor="#00416B"
-                />
-   
-        <Label x:Name="RESULTADO"
-           Text="" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button Text="Buscar CEP" TextColor="#FFFFFF" BackgroundColor="#00416B" x:Name="botao"/>
+
+        <Label Text="" HorizontalOptions="Center" VerticalOptions="Center" x:Name="resultado"/>
     </StackLayout>
+
 
 </ContentPage>

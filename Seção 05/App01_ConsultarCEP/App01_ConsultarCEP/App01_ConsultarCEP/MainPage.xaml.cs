@@ -7,7 +7,6 @@ using Xamarin.Forms;
 using App01_ConsultarCEP.Servico.Modelo;
 using App01_ConsultarCEP.Servico;
 
-
 namespace App01_ConsultarCEP
 {
     public partial class MainPage : ContentPage
@@ -16,62 +15,54 @@ namespace App01_ConsultarCEP
         {
             InitializeComponent();
 
-            BOTAO.Clicked += buscarCEP;
+            botao.Clicked += buscarCep;         
         }
 
-        private void buscarCEP(object sender, EventArgs args)
-        {
-            string cep = CEP.Text.Trim();
+        private void buscarCep(object sender, EventArgs args)
+        {            
+            string ceplido = cep.Text.Trim();
 
-            if (isValidCEP(cep))
+            if (isValidCep(ceplido))
             {
                 try
                 {
-                    Endereco end = ViaCEPServico.BuscarEnderecoViaCEP(cep);
-
+                    Endereco end = ViaCEPServico.BuscarEnderecoViaCEP(ceplido);
                     if (end != null)
                     {
-                        RESULTADO.Text = string.Format("Endereço: {0}, {1}, {2}, {3}", end.logradouro, end.bairro, end.localidade, end.uf);
+                        resultado.Text = string.Format("Endereço: {2}, {3} - {0}, {1}", end.localidade, end.uf, end.logradouro, end.bairro);
                     }
                     else
                     {
-                        DisplayAlert("ERRO", "O endereço não foi encontrato para o CEP informado: " + cep, "OK");
-                    }                    
-
-                }catch(Exception e)
+                        DisplayAlert("ERRO", "Endereço não encontrado para o CEP informado: " + ceplido, "OK");
+                    }
+                    
+                }
+                catch (Exception e)
                 {
                     DisplayAlert("ERRO CRÍTICO", e.Message, "OK");
                 }
                 
             }
-            else
-            {
+          
+            //TODO - validações
 
-            }
-            
         }
-        
-        private bool isValidCEP(string cep)
+        private bool isValidCep(string ceplido)
         {
-            bool valido = true;
-            int novoCEP = 0;
-
-            if(cep.Length != 8)
+            bool valid = true;
+            if (ceplido.Length != 8)
             {
-                DisplayAlert("ERRO", "CEP inválido! O CEP deve conter 8 caracteres!", "OK");
-
-                valido = false;
+                DisplayAlert("ERRO", "CEP INVÁLIDO! O CEP deve conter 8 caracteres", "OK");
+                valid = false;
             }
 
-            if(!int.TryParse(cep, out novoCEP))
+            int novoCep = 0;
+            if (!int.TryParse(ceplido, out novoCep))
             {
-                DisplayAlert("ERRO", "CEP inválido! O CEP deve conter somente números!", "OK");
-
-                valido = false;
+                DisplayAlert("ERRO", "CEP INVÁLIDO! O CEP deve conter somente números", "OK");
+                valid = false;
             }
-
-            return valido;
-
+            return valid;
         }
     }
 }

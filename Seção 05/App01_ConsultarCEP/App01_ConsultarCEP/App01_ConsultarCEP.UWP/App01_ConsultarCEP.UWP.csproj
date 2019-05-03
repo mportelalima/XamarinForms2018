@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{57FB64C4-F894-4BEA-88F3-7D13A847362E}</ProjectGuid>
+    <ProjectGuid>{B9F96E46-0509-47B6-9927-1932E01E296B}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>App01_ConsultarCEP.UWP</RootNamespace>
@@ -144,12 +144,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App01_ConsultarCEP\App01_ConsultarCEP.csproj">
-      <Project>{D76EF89B-856C-4AC2-8258-032620954A91}</Project>
+      <Project>{F81D5EBC-7FEB-4694-8221-3A118884EE01}</Project>
       <Name>App01_ConsultarCEP</Name>
     </ProjectReference>
   </ItemGroup>

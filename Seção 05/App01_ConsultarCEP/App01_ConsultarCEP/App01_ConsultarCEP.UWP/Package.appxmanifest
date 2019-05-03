@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="44a6154b-0d9e-4563-8ca6-2333e6c26c7f"
-    Publisher="CN=489e7523-04be-4dc9-84e4-a55f4e1ddbfa"
+    Name="293ea394-8c65-487f-8aca-94383e20d166"
+    Publisher="CN=047ee556-eed3-4431-b386-16e9648945ed"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>App01_ConsultarCEP.UWP</DisplayName>
-    <PublisherDisplayName>489e7523-04be-4dc9-84e4-a55f4e1ddbfa</PublisherDisplayName>
+    <PublisherDisplayName>047ee556-eed3-4431-b386-16e9648945ed</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

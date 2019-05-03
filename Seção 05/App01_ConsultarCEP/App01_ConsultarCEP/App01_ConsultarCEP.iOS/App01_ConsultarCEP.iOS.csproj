@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F15B013D-FA4A-407A-BD68-36542D6E366F}</ProjectGuid>
+    <ProjectGuid>{AA88F17D-E58E-43B5-8A09-5B409329E704}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
@@ -148,12 +148,12 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\App01_ConsultarCEP\App01_ConsultarCEP.csproj">
-      <Project>{D76EF89B-856C-4AC2-8258-032620954A91}</Project>
+      <Project>{F81D5EBC-7FEB-4694-8221-3A118884EE01}</Project>
       <Name>App01_ConsultarCEP</Name>
     </ProjectReference>
   </ItemGroup>
